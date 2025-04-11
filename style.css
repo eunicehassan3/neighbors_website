@@ -9,8 +9,7 @@
 
 body{
     background-color: white;
-    
-
+    font-family: "Source Sans 3", sans-serif;
 }
 
 .logo{
@@ -25,7 +24,12 @@ body{
     justify-content: center;
 }
 
-  a {
+  h2 {
+    color: #59829B;
+  }
+
+
+  .topnav a {
     font-family:"Source Sans 3" , sans-serif;
     color: #59829B;
     display: block;
@@ -39,6 +43,11 @@ body{
   a:hover{
     background-color: #9FD3FA;
     color:white;
+  }
+
+  a {
+    color: black;
+    padding: 9px;
   }
 
 .topnav{
@@ -169,3 +178,104 @@ body{
     line-height: 30px;
   }
   
+
+  /* speaker css below */
+
+.speaker img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 300rem;
+  object-position:top;
+  border-style: solid;
+  border-width: .4rem;
+  border-color: #353C58;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100vw;
+}
+
+.speaker_text {
+  width: 50vw;
+}
+
+.allspeakers {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+#red {
+  border-color: #D13F40;
+}
+
+#green {
+  border-color: #6A9381;
+}
+
+#navy {
+  border-color: #0D141A;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.speakers_preview{
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  gap: 3rem;
+}
+
+.speakers_preview p{
+  font-size: 1.1rem;
+}
+
+.images{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  background: #9fd3fa;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.marquee-content {
+  display: inline-block;
+  /* padding-left: 100%; */
+  color: white;
+  font-size: 3rem;
+  animation: scroll 30s linear infinite;
+}
+
+.white{
+  color: white;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
