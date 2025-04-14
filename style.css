@@ -157,22 +157,31 @@ body{
     padding: 10px;
   }
 
-  .schedule-talks h3{
-    color: #59829B;
+  .schedule-header h3{
+    color: #000000;
     font-family:"Source Sans 3" , sans-serif;
     font-size: 20px;
     font-weight: 600;
   }
 
-  .schedule-talks h2{
-    color: #59829B;
+  .day{
+    color: #ffffff;
+    background-color: #9FD3FA;
     margin-bottom: 10px;
     font-family:"Source Sans 3" , sans-serif;
     font-size: 40px;
     font-weight: 600;
+    margin-left: 40px;
+    width: 240px;
+    padding-left: 10px;
   }
 
   .schedule-talks p{
+    font-family:"Source Sans 3" , sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .schedule-details p{
     font-family:"Source Sans 3" , sans-serif;
     font-size: 18px;
     line-height: 30px;
@@ -248,14 +257,14 @@ body{
 
 
 .marquee {
-  white-space: nowrap;
-  overflow: hidden;
-  box-sizing: border-box;
   width: 100%;
   background: #9fd3fa;
   color: white;
   font-size: 2rem;
   padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+
 }
 
 .marquee-content {
@@ -271,11 +280,33 @@ body{
 }
 
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.schedule-talk {
+  /* padding: 10px; */
+  margin: 40px;
+}
+
+.schedule-header {
+  display: flex;
+  /* border: 1px solid; */
+  /* justify-content: space-between; */
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.schedule-details {
+  display: none;
+  margin-top: 10px;
+}
+
+.schedule-talk.expanded .schedule-details {
+  display: block;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.schedule-talk.expanded .arrow {
+  transform: rotate(90deg);
 }
